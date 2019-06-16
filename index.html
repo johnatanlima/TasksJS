@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Js - Curso em Vídeo </title>
+    <style>
+        body{
+            background-color: #c5c6ff;
+            color: #10587e;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+     
+</head>
+<body>
+    <h1> Bora aprender JS. </h1>
+
+<script>
+    alert("Olá, User. Seja Bem Vindo")  
+    var nome = prompt("Informe qual seu nome: ")     
+ 
+    alert("Ok, " + nome + "! Está tudo ok. Siga com o curso... ")
+    
+    alert('Agora vamos testar uma soma')
+
+    var num1 = parseFloat(prompt('Digite o primeiro numero: ')) //ou Number(string)
+    var num2 = Number(prompt('Digite o segundo numero')) 
+    var soma = num1 + num2;
+
+    alert("A soma dos seus numeros é: " + String(soma) + "\n\n" + 
+    "Ou podendo usar o Template String `${const}` \n\n" +
+    "---> A soma de ${num1} e ${num2} é: ${soma} <--- \n\n" +
+    ` A soma de ${num1} e ${num2} é: ${soma} \n\n O tipo da variavel some é: ${typeof(soma)}`)
+
+</script>
+</body>
+</html>
