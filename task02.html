@@ -1,0 +1,90 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            
+    <title> task02 </title>
+    <style>
+        body{
+            background-color: #fffde7;
+            color: #f9a825;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+        }
+    </style>
+     
+</head>
+<body>
+    <div class="container">            
+        <h2 class="center-align"> Bora aprender um pouco de JS. </h2>
+
+        <div class="card-panel hoverable">
+            <blockquote style="border-left: 5px solid #ebdcc5"> 
+            <span class="blue-text text-darken-2">                 
+                Exiba a quantidade de letras que possuem o texto inserido ao clicar no botão
+            </span>    
+            </blockquote>
+        </div>
+        <br > 
+        <div class="divider"></div>
+        <div class="section">
+            <div class="row card-panel">
+            <h5 class="center-align"> Seção para receber valores </h5>
+            
+            <div class="input-field">
+                <input placeholder="Digite seu nome" id="nome" type="text" class="validate" >
+                <label for="nome">Nome</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="Digite seu sobrenome" id="sobrenome" type="text" class="validate">
+                <label for="sobrenome"> Sobrenome</label>
+            </div>
+            
+                <button class="btn" onclick="mostraNome()"> Mostrar Nome</button>
+                <button class="btn" onclick="totalCaracteres()"> Mostrar Nº de Caracteres </button>
+            </div>
+        </div>
+
+    </div>   
+
+<script>
+   function mostraNome(){
+       const nome = String(document.getElementById('nome').value);
+       const sobrenome = String(document.getElementById('sobrenome').value);
+       
+       const confirmar = confirm(` CONFIRMAÇÃO \n\n NOME: ${nome} ${sobrenome}`)
+
+       if(confirmar === true){
+           alert('Obrigado pela confirmação!')
+       } else{
+           alert('Algo deu errado!')
+       }
+       
+       document.getElementById('nome').value = '';
+       document.getElementById('sobrenome').value = '';
+   }
+
+   function totalCaracteres(){
+
+        const nome = String(document.getElementById('nome').value);
+        const sobrenome = String(document.getElementById('sobrenome').value);
+
+        if (nome == '' || sobrenome == '') {
+          alert('Você não preencheu todos os campos!')
+        } else if ((nome.length > 0) && (sobrenome.length > 0)) {
+           alert(`Seu nome tem: ${nome.length} | Sobrenome ${sobrenome.length}`)
+        }
+
+        document.getElementById('nome').value = '';
+        document.getElementById('sobrenome').value = '';
+   }
+   
+</script>
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
