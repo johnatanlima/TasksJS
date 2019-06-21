@@ -1,0 +1,56 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title> Learn js  </title>
+</head>
+<body>
+   <h1> Atribuição de conteúdo para variáveis </h1>
+   
+    <div id="divum">
+        <p>
+        Esse é o paragrafo da divUm.
+        </p>
+        <ul>
+            <li> Item Um </li>
+            <li> Item Dois </li>
+            <li> Item Tres</li>
+        </ul>
+    </div>
+    <hr />
+   
+    <div id="resul1">
+        
+    </div>
+
+    <div id="resul2">
+       
+    </div>
+
+    <div id="resul3">
+       
+    </div>
+    
+ 
+  
+     
+   
+ <script>	
+    var texto = prompt("Informe: Se vc adicionar texto com tags HTML elas poderão ser interpretadas em seu browser. Teste aqui:  ")
+  
+    document.getElementById("resul1").innerHTML = texto; //Frase para testar: <h3> Texto quem contém tags HTML </h3>
+    document.getElementById("resul2").innerText = texto;
+    document.getElementById("resul3").textContent = texto;
+
+        var content = document.getElementById("divum").innerHTML; 
+        var content2 = document.getElementById("divum").innerText;
+        var content3 = document.getElementById("divum").textContent;
+  
+    document.write(content + "<hr/>")
+    document.write(content2 + "<hr/>")
+    document.write(content3 + "<hr/>")
+
+    alert(`${content} \n\n ${content2} \n\n ${content3}`)
+   
+ </script>
+</body>
+</html>
