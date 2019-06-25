@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title> Task - 04 </title>
+
+</head>
+<body>
+    <div class="container">
+     <h2>
+        Esta tarefa consiste em manipular elementos HTML, com a utilização de funcões JavaScript.
+        Tanto através de clique, quanto passar mouse sobre a imagem e provocar sua alteração.
+        Consiste em fazer a imagem da lâmpada acender.   
+     </h2>
+    
+    <hr>
+
+    <!-- Estrutura do Card -->
+    <div class="card ca" style="width: 18rem; margin: 0 auto;">
+        <img id="lampada" class="card-img-top" src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" alt="Lampada Apagada">
+            <div class="card-body">
+                <h5 class="card-title"> Lâmpada </h5>
+                <p class="card-text"> Ohhh .. você precisa acender esta lâmpada? </p>
+                <p style="align-content:space-around;">
+                    <button onclick="turnOn()" class="btn btn-primary"> ACENDER! </button>
+                    <button onclick="turnOff()" class="btn btn-info"> APAGAR ! </button>
+                </p>
+            </div>
+    </div>
+</div>
+
+    <script>
+       function turnOn(){
+            var acesa = document.getElementById('lampada');
+            acesa.src = 'https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true';
+       }
+
+       function turnOff(){
+            var apagada = document.getElementById('lampada');
+            apagada.src = 'https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true'
+       }
+
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
