@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            
+    <title> task -05 </title>
+    <style>
+        body{
+            background-color: #fffde7;
+            color: #f9a825;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        ::-moz-placeholder{
+            color: darkseagreen;
+        }
+
+    </style>
+     
+</head>
+<body>
+    <input type="text" placeholder="aqui vai algo">
+    <div class="container">            
+        <h2 class="center-align"> Bora aprender um pouco de JS. </h2>
+
+        <div class="card-panel hoverable">
+            <blockquote style="border-left: 5px solid #ebdcc5"> 
+                <span class="blue-text text-darken-2">  
+                    <i> Questão 05 - </i> Crie um campo texto para preencher um
+                        CPF que tenha o campo limitado a 11 dígitos. Contenha um id="cpf", 
+                        e exiba ao lado com pontuação conforme preencher.
+                        A temida VALIDAÇÃO DE DADOS HAHAHA      
+                </span>    
+            </blockquote>
+        </div>
+        <br > 
+        <div class="divider"></div>
+        <div class="section">
+            <div class="row card-panel">
+            <h5 class="center-align"> Seção para receber valores </h5>
+            
+            <div class="input-field">
+                <input placeholder="Digite seu nome" id="nome" type="text" class="validate">
+                <label for="nome">Nome</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="Digite seu sobrenome" id="sobrenome" type="text" class="validate">
+                <label for="sobrenome"> Sobrenome</label>
+            </div>
+
+            <div class="input-field">
+                <input placeholder="000.000.000-00" id="inpCpf" type="text">
+                <label for="inpCpf"> CPF </label>
+            </div>
+            
+                <button class="waves-effect waves-teal btn-flat" onclick="mostraNome()"> Mostrar Nome</button>
+            </div>
+        </div>
+
+    </div>   
+
+<script>
+
+    const place = document.getElementById('inpCpf');
+    place.setAttribute('maxlength', '11');
+   
+   function mostraNome(){
+       const nome = String(document.getElementById('nome').value);
+       const sobrenome = String(document.getElementById('sobrenome').value);
+       
+       const confirmar = confirm(` CONFIRMAÇÃO \n\n NOME: ${nome} ${sobrenome}`)
+       if(confirmar === true){
+           alert('Obrigado pela confirmação!')
+       } else{
+           alert('Algo deu errado!')
+       }
+       
+       document.getElementById('nome').value = '';
+       document.getElementById('sobrenome').value = '';
+
+   }
+
+</script>
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
