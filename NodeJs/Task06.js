@@ -25,3 +25,9 @@ function obterEndereco(idUsuario, callback){
         })
     }, 3000)
 }
+
+function resolverUsuario(erro, usuario){
+    console.log('usuario', usuario)
+}
+
+
